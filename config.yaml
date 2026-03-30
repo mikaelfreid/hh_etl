@@ -1,0 +1,23 @@
+database:
+  url: postgresql+psycopg2://etl:etl@localhost:5432/etl
+
+search:
+  area: 1
+  text: "МТС"
+  search_field: "company_name"
+  date_from_default: "2026-01-01 00:00:00"
+  items_on_page: 20
+  order_by: "publication_time"
+  enable_snippets: true
+  no_magic: true
+
+http:
+  timeout: 30
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+
+retry:
+  attempts: 10
+  wait_seconds: 1
+
+logging:
+  file_name: "tmp.txt"
